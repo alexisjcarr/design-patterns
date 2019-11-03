@@ -1,13 +1,11 @@
 class Mall {
+  constructor() {
+    this.sales = []
+  }
 
-    constructor() {
-        this.sales = [];
-    }
-
-    notify(storeName, discount) {
-        this.sales.push({ storeName, discount });
-    }
-
+  notify(storeName, discount) {
+    this.sales.push({ storeName, discount })
+  }
 }
 
-module.exports = Mall;
+module.exports = Mall

@@ -1,0 +1,24 @@
+{
+  "name": "design_patterns",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"**/*.{js,scss,css,html,json,md,less,tsx}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexisjcarr/design-patterns.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexisjcarr/design-patterns/issues"
+  },
+  "homepage": "https://github.com/alexisjcarr/design-patterns#readme",
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  }
+}

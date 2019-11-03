@@ -1,26 +1,24 @@
 class Shopper {
+  constructor(name = 'unnamed person') {
+    this._name = name
+    this._shoppingList = []
+  }
 
-    constructor(name='unnamed person') {
-        this._name = name;
-        this._shoppingList = [];
-    }
+  set name(value) {
+    this._name = value
+  }
 
-    set name(value) {
-        this._name = value;
-    }
+  get name() {
+    return this._name
+  }
 
-    get name() {
-        return this._name;
-    }
+  get shoppingList() {
+    return this._shoppingList.join(', ')
+  }
 
-    get shoppingList() {
-        return this._shoppingList.join(', ');
-    }
-
-    addItemToList(item) {
-        this._shoppingList.push(item);
-    }
-
+  addItemToList(item) {
+    this._shoppingList.push(item)
+  }
 }
 
-module.exports = Shopper;
+module.exports = Shopper

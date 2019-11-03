@@ -1,8 +1,7 @@
 class Shopper {
-
-    constructor(name) {
-        this.name = name;
-    }
+  constructor(name) {
+    this.name = name
+  }
 }
 
-module.exports = Shopper;
+module.exports = Shopper

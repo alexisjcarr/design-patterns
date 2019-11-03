@@ -1,36 +1,32 @@
-var path = require('path');
-var { appendFile } = require('fs');
-var morse = require('morse');
+var path = require('path')
+var { appendFile } = require('fs')
+var morse = require('morse')
 
 class LogStrategy {
+  static toMorseCode(timestamp, message) {
+    var morseCode = morse.encode(message)
+    console.log(morseCode)
+  }
 
-    static toMorseCode(timestamp, message) {
-        var morseCode = morse.encode(message);
-        console.log(morseCode);
-    }
+  static noDate(timestamp, message) {
+    console.log(message)
+  }
 
-    static noDate(timestamp, message) {
-        console.log(message);
-    }
+  static toFile(timestamp, message) {
+    var fileName = path.join(__dirname, 'logs.txt')
+    appendFile(fileName, `${timestamp} - ${message} \n`, error => {
+      if (error) {
+        console.log('Error writing to file')
+        console.error(error)
+      }
+    })
+  }
 
-    static toFile(timestamp, message) {
-        var fileName = path.join(__dirname, 'logs.txt');
-        appendFile(fileName, `${timestamp} - ${message} \n`, error => {
-            if (error) {
-                console.log('Error writing to file');
-                console.error(error);
-            }
-        })
-    }
+  static toConsole(timestamp, message) {
+    console.log(`${timestamp} - ${message}`)
+  }
 
-    static toConsole(timestamp, message) {
-        console.log(`${timestamp} - ${message}`);
-    }
-
-    static none() {
-
-    }
-
+  static none() {}
 }
 
-module.exports = LogStrategy;
+module.exports = LogStrategy

@@ -1,9 +1,7 @@
 class Mall {
-
-    constructor() {
-        this.sales = [];
-    }
-
+  constructor() {
+    this.sales = []
+  }
 }
 
-module.exports = Mall;
+module.exports = Mall
